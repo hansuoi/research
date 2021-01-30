@@ -1,0 +1,51 @@
+file_name = './torisetsu/00'
+import szk_lib as sl
+
+
+↓ text = sl.preprocess1(file_name)
+記号を消し去って分かち書きしたfile_name_w.txt
+↓ sl.words_list(text)
+登場する単語(原形)のリストwords_list
+
+w_list = './words_list00'
+w_size = 1
+
+
+↓ sl.c_matrix(text, w_size, w_list)
+共起行列c_matrix
+
+c_matrix = './c_matrix00'
+
+
+↓ sl.weeds_list(text, w_list, c_matrix)
+weeds値が記されたweeds.txt
+
+
+↓ sl.substr(text)
+名詞句の共通部分が記された共通部分.txt
+
+
+
+
+
+-----------------------------------------------------
+
+
+
+
+file_name = './torisetsu/00'
+import szk_lib as sl
+text = sl.preprocess1(file_name)
+sl.words_list(text)
+
+(words_listの名前を変える)
+
+w_list = './words_list00'
+w_size = 1
+sl.c_matrix(text, w_size, w_list)
+
+(c_matrixの名前を変える)
+
+c_matrix = './c_matrix00'
+sl.weeds_list(text, w_list, c_matrix)
+sl.substr(text)
